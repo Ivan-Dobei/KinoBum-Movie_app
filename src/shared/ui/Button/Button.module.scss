@@ -1,0 +1,13 @@
+.Button {
+   display: flex;
+   align-items: center;
+}
+
+.clear {
+   background-color: inherit;
+   font: var(--font-m);
+   color: var(--light-color);
+}
+.size_s {
+   padding: 5px;
+}

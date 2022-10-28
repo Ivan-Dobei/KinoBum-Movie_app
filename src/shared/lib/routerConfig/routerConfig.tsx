@@ -1,6 +1,6 @@
 import {RouteProps} from "react-router-dom";
-import {MainPage} from "../pages/MainPage";
-import {MoviePage} from "../pages/MoviePage";
+import {MainPage} from "../../../pages/MainPage";
+import {MoviePage} from "../../../pages/MoviePage";
 
 export enum AppRoutes {
    MAIN = 'main',
