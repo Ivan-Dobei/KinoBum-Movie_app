@@ -1,20 +1,14 @@
-@import "reset";
-@import "variables/global";
-@import "theme/dark";
-@import "theme/light";
-
+@import "imports";
 
 .app {
    height: 100vh;
    font: var(--font-m);
-   background-color: var(--bg-color);
    color: var(--primary-color);
+   background-color: var(--bg-color);
 }
 
 .container {
-   max-width: 1230px;
-   padding: 0 15px;
    margin: 0 auto;
+   padding: 0 15px;
+   max-width: 1230px;
 }
-
-

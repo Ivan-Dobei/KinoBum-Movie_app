@@ -3,10 +3,10 @@
 }
 
 .primary {
-   font: var(--font-size-m);
-   background-color: var(--bg-input-color);
-   color: var(--light-color);
    border-radius: 5px;
+   font: var(--font-size-m);
+   color: var(--light-color);
+   background-color: var(--bg-input-color);
 }
 
 .size_m {
@@ -18,5 +18,3 @@
    width: 370px;
    height: 40px;
 }
-
-
