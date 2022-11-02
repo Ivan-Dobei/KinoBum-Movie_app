@@ -3,12 +3,28 @@
    align-items: center;
 }
 
-.clear {
+.clear,
+.round_clear {
    font: var(--font-m);
    color: var(--light-color);
    background-color: inherit;
+   border-radius: 3px;
+   transition: background-color 0.2s ease-in;
+}
+
+.round_clear {
+   border-radius: 50%;
+}
+
+.clear:hover,
+.round_clear:hover {
+   background-color: var(--bg-clear-color);
 }
 
 .size_s {
    padding: 5px;
+}
+
+.size_m {
+   padding: 10px;
 }

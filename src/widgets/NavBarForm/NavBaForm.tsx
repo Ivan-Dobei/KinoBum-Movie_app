@@ -19,8 +19,8 @@ export const NavBaForm = ({className}: NavBaFormProps) => {
             placeholder="Search..."
          />
          <Button
-            size={ButtonSize.S}
-            theme={ButtonTheme.CLEAR}
+            size={ButtonSize.M}
+            theme={ButtonTheme.ROUND_CLEAR}
          >
             <SearchIcon/>
          </Button>

@@ -1,0 +1,13 @@
+.BurgerMenu {
+   display: none;
+   position: absolute;
+   top: var(--navbar-height);
+   left: 0;
+   width: 300px;
+   height: calc(100vh - var(--navbar-height));
+   background-color: #fff;
+}
+
+.open {
+   display: block;
+}

@@ -6,20 +6,33 @@ import {Button, ButtonSize, ButtonTheme} from 'shared/ui/Button/Button';
 
 interface NavBarProps {
     className?: string;
+    onToggle?: () => void;
 }
 
-export const NavBar = ({className}: NavBarProps) => {
+export const NavBar = (props: NavBarProps) => {
+
+   const {className, onToggle} = props;
+
    return (
       <div
-         data-testId={'navbar'}
+         data-testid={'navbar'}
          className={classNames(cls.NavBar, {}, [className])}
       >
          <div className={classNames(cls.content, {}, ['container'])}>
-            <Logo/>
+            <div className={cls.logoBock}>
+               <Button
+                  className={cls.burger}
+                  theme={ButtonTheme.CLEAR}
+                  onClick={onToggle}
+               >
+                  <span className={cls.burgerLine}/>
+               </Button>
+               <Logo/>
+            </div>
             <NavBaForm/>
             <Button
                theme={ButtonTheme.CLEAR}
-               size={ButtonSize.S}
+               size={ButtonSize.M}
             >
                click
             </Button>
