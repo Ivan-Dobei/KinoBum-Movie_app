@@ -36,7 +36,7 @@
     }],
     "react/display-name": ["warn", { "ignoreTranspilerName": true }],
     "comma-dangle": ["error", "always-multiline"],
-    "no-undef": "warn"
+    "no-undef": "off"
   }
 }
 

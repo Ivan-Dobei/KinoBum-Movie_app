@@ -10,7 +10,10 @@ interface NavBarProps {
 
 export const NavBar = ({className}: NavBarProps) => {
    return (
-      <div className={classNames(cls.NavBar, {}, [className])}>
+      <div
+         data-testId={'navbar'}
+         className={classNames(cls.NavBar, {}, [className])}
+      >
          <div className={classNames(cls.content, {}, ['container'])}>
             <Logo/>
             <NavBaForm/>
