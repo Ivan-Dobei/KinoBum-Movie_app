@@ -1,4 +1,6 @@
 :root {
+   // fonts
+
    --font-family-main: "Roboto", serif;
    --font-size-m: 16px;
    --font-line-m: 24px;
@@ -6,7 +8,16 @@
    --font-size-l: 24px;
    --font-line-l: 32px;
    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+
+   // size
    --navbar-height: 70px;
+
+   // colors
    --bg-input-color: #333;
    --light-color: #fff;
+
+   // z-indexes
+   --burger-z-index: 1;
+   --burger-z-index-active: 10;
+   --burger-button-z-index: 15;
 }

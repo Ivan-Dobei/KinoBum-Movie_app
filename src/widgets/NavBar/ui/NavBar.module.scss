@@ -1,7 +1,7 @@
 .NavBar {
    width: 100%;
    height: var(--navbar-height);
-   background-color: #1f1f1f;
+   background-color: var(--bg-color-inverted);
 }
 
 .content {
@@ -9,6 +9,8 @@
    align-items: center;
    justify-content: space-between;
    height: 100%;
+   position: relative;
+   z-index: var(--burger-button-z-index);
 }
 
 .logoBock {
@@ -17,34 +19,60 @@
 }
 
 .burger {
-   width: 20px;
-   height: 17px;
+   width: 50px;
+   height: 50px;
    margin-right: 15px;
    position: relative;
+   padding: 0;
 }
 
 .burgerLine {
-   width: 90%;
+   width: 50%;
    height: 2px;
+   margin: 0 auto;
    background-color: var(--light-color);
    border-radius: 2px;
 }
 
-.burgerLine::before,
-.burgerLine::after {
+.burger::before,
+.burger::after {
    content: "";
-   width: 90%;
+   width: 50%;
    height: 2px;
    position: absolute;
-   left: 0;
+   left: 50%;
+   transform: translateX(-50%);
    background-color: var(--light-color);
    border-radius: 2px;
 }
 
-.burgerLine::before {
-   top: 0;
+.burger::before {
+   top: 16px;
 }
 
-.burgerLine::after {
-   bottom: 0;
+.burger::after {
+   bottom: 16px;
+}
+
+.burgerActive {
+   .burgerLine {
+      opacity: 0;
+   }
+
+   .app {
+      overflow: hidden;
+   }
+}
+
+.burgerActive::before {
+   left: 25%;
+   top: 50%;
+   transform: rotate(45deg);
+}
+
+.burgerActive::after {
+   left: 25%;
+   top: 50%;
+   bottom: auto;
+   transform: rotate(-45deg);
 }

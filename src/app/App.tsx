@@ -8,17 +8,11 @@ import {BurgerMenu} from 'widgets/BurgerMenu/ui/BurgerMenu';
 const App = () => {
 
    const {theme, toggleTheme} = useTheme();
-   const [collapsed, setCollapsed] = useState(false);
-
-   const toggleBurger = () => {
-      setCollapsed(prev => !prev);
-   };
 
    return (
       <div className={`app ${theme}`}>
-         <NavBar onToggle={toggleBurger}/>
+         <NavBar/>
          <button onClick={toggleTheme}>toggle</button>
-         <BurgerMenu isOpen={collapsed}/>
          <AppRouter/>
       </div>
    );

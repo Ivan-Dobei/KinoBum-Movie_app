@@ -1,6 +1,6 @@
 import React from 'react';
-import {Route, Routes} from "react-router-dom";
-import {routerConfig} from "../../../../shared/lib/routerConfig/routerConfig";
+import {Route, Routes} from 'react-router-dom';
+import {routerConfig} from '../../../../shared/lib/routerConfig/routerConfig';
 
 const AppRouter = () => {
    return (
@@ -10,7 +10,7 @@ const AppRouter = () => {
                key={route.path}
                path={route.path}
                element={route.element}
-            />
+            />,
          )}
       </Routes>
    );
