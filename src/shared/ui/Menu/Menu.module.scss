@@ -1,0 +1,29 @@
+.Menu {
+   position: absolute;
+   top: -10px;
+   left: 0;
+   right: 0;
+   padding: calc(var(--navbar-height) + 10px) 40px 40px 40px;
+   display: flex;
+   flex-direction: column;
+   background-color: var(--light-dark-color);
+   border-radius: 0 0 10px 10px;
+   z-index: var(--small-z-index);
+   box-shadow: 0 54px 40px rgb(0 0 0 / 12%), 0 19.2px 51.2px rgb(0 0 0 / 16%), 0 80px 89.6px rgb(0 0 0 / 24%);
+   opacity: 0;
+   transition: opacity 0.15s ease-in;
+}
+
+.menuItem {
+   font: var(--font-m);
+   color: #fff;
+   text-decoration: none;
+}
+
+.menuItem:not(:last-child) {
+   margin-bottom: 15px;
+}
+
+.open.Menu {
+   opacity: 1;
+}

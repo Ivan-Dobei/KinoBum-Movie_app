@@ -2,6 +2,8 @@
    font: var(--font-l);
    text-transform: uppercase;
    color: #fff;
+   z-index: var(--medium-z-index);
+   text-decoration: none;
 }
 
 .logo__blue {

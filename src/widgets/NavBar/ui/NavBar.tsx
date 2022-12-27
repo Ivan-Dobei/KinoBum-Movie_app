@@ -3,8 +3,8 @@ import {classNames} from 'shared/lib/classNames/classNames';
 import {Logo} from 'shared/ui/Logo/Logo';
 import {NavBaForm} from 'widgets/NavBarForm/NavBaForm';
 import {Button, ButtonSize, ButtonTheme} from 'shared/ui/Button/Button';
-import {BurgerMenu} from 'widgets/BurgerMenu/ui/BurgerMenu';
 import {useState} from 'react';
+import {Menu} from 'shared/ui/Menu/Menu';
 
 interface NavBarProps {
     className?: string;
@@ -12,10 +12,10 @@ interface NavBarProps {
 
 export const NavBar = ({className}: NavBarProps) => {
 
-   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-   const toggleBurger = () => {
-      setIsBurgerOpen(prev => !prev);
+   const toggleMenu = () => {
+      setIsMenuOpen(prev => !prev);
    };
 
    return (
@@ -23,16 +23,13 @@ export const NavBar = ({className}: NavBarProps) => {
          data-testid={'navbar'}
          className={classNames(cls.NavBar, {}, [className])}
       >
-         <BurgerMenu
-            isOpen={isBurgerOpen}
-            onClose={toggleBurger}
-         />
          <div className={classNames(cls.content, {}, ['fluid-container'])}>
             <div className={cls.logoBock}>
+               <Menu isOpen={isMenuOpen} onChange={toggleMenu}/>
                <Button
-                  className={classNames(cls.burger, {[cls.burgerActive]: isBurgerOpen}, [])}
+                  className={classNames(cls.burger, {[cls.burgerActive]: isMenuOpen}, [])}
                   theme={ButtonTheme.ROUND_CLEAR}
-                  onClick={toggleBurger}
+                  onClick={toggleMenu}
                >
                   <span className={cls.burgerLine}/>
                </Button>

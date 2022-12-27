@@ -11,13 +11,18 @@
 
    // size
    --navbar-height: 70px;
+   --content-width: 1230px;
+   --container-offset: 15px;
+   --container-width: calc(var(--content-width) + var(--container-offset));
 
    // colors
    --bg-input-color: #333;
    --light-color: #fff;
+   --black-color: #000;
+   --dark-color: #141414;
+   --light-dark-color: #1f1f1f;
 
    // z-indexes
-   --burger-z-index: 1;
-   --burger-z-index-active: 10;
-   --burger-button-z-index: 15;
+   --small-z-index: 1;
+   --medium-z-index: 10;
 }

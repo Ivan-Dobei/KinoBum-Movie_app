@@ -3,7 +3,6 @@ import './styles/style.scss';
 import {AppRouter} from './providers/AppRouter';
 import {useTheme} from './providers/ThemeProvider/useTheme';
 import {NavBar} from 'widgets/NavBar';
-import {BurgerMenu} from 'widgets/BurgerMenu/ui/BurgerMenu';
 
 const App = () => {
 
